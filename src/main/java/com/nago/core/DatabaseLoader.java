@@ -70,7 +70,6 @@ public class DatabaseLoader implements ApplicationRunner {
                 IntStream.rangeClosed(0, random(controlTemplates.length))
                     .forEach(a -> {
                       String controlName = controlTemplates[a % controlTemplates.length];
-                      //TODO: set the last user who modified control (not in DB loader, but separately)
                       Control c = new Control(controlName, d, random(100), administrators.get(random(administrators.size())));
                       d.addControl(c);
                     });
